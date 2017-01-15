@@ -10,27 +10,26 @@ body
   height 33.334%
   margin 0
   user-select none
-
-.row-1
-  .logo-wrapper
-  .welcome-wrapper
-  .about-wrapper
+  & > [class*='col-']
     overflow hidden
     position relative
     height 100%
+
+.row
+  .icon
+    display block
+    verticalCenter()
+
+.row-1
   .logo-wrapper
     background black
-    .logo
-      display block
+    .icon
       width 70%
       margin 0 15%
-      verticalCenter()
   .welcome-wrapper
     background white
     .background
     .foreground
-      width 100%
-      height 100%
       .welcome
         text-transform uppercase
         display block
@@ -41,7 +40,6 @@ body
         &-2
           verticalCenter()
     .background
-      absolute top
       .welcome
         font-size 11vw
         letter-spacing 0.05em
@@ -51,8 +49,6 @@ body
         &-3
           bottom -0.05em
     .foreground
-      position relative
-      z-index 2
       .welcome
         padding-left 0.15em
         font-size 9vw
@@ -74,33 +70,76 @@ body
         white-space nowrap
         text-shadow -2px 0 0 red, 2px 0 0 blue
         animation glitch 0.5s ease infinite alternate
-        // &::before
-        // &::after
-        //   content attr(data-text)
-        //   absolute left 50%
-        //   z-index -1
-        //   background black
-        // &::before
-        //   clip rect(0.35em, 0.5em, 0.7em, 0)
-        //   transform translate(calc(-50% + 2px), 0)
-        //   text-shadow -1px 0 red
-        // &::after
-        //   transform translate(calc(-50% - 2px), 0)
-        //   text-shadow -1px 0 blue
       .line-1
-        font-size 4vw
-        text-transform uppercase
+        line-params(4vw, 0, uppercase)
       .line-2
+        line-params(2vw, 0.25em, capitalize)
       .line-3
-        letter-spacing 0.25em
-        font-size 2vw
-        text-transform capitalize
+        line-params(2vw, 0.3em, capitalize)
       .line-4
         font-weight 700
-        letter-spacing 0.1em
-        font-size 2.25vw
-        text-transform capitalize
+        line-params(2.25vw, 0.1em, capitalize)
       .line-5
-        letter-spacing 0.15em
-        font-size 2vw
-        text-transform lowercase
+        line-params(2vw, 0.15em, lowercase)
+  .portfolio-wrapper
+    background white
+    .foreground
+      color black
+      .inner-wrapper
+        absolute bottom 0.5em left 0.5em
+        .line
+          line-height 1em
+          display block
+        .line-1
+          font-weight 700
+          line-params(3vw, 0.75em, capitalize)
+        .line-2
+          font-weight 700
+          margin -0.2em 0 0.1em 0
+          line-params(3vw, 0.4em, lowercase)
+        .line-3
+          line-params(2.4vw, 0, lowercase)
+        .line-4
+          font-weight 500
+          word-spacing 0.75em
+          line-params(3vw, 0 lowercase)
+        .line-5
+          word-spacing 0.75em
+          line-params(1.8vw, 0, lowercase)
+    .background
+      .line
+        line-height 1em
+        display block
+        color grey-1
+        white-space nowrap
+      .line-1
+        font-weight 900
+        margin -0.25em 0 0 0
+        line-params(7vw, 0.25em, lowercase)
+      .line-2
+        font-weight 500
+        line-params(5vw, 0.1em, lowercase)
+      .line-3
+        margin -0.25em 0
+        line-params(4vw, 0.1em, lowercase)
+      .line-4
+        font-weight 700
+        line-params(4vw, 0.1em, lowercase)
+.row-2
+  .about-wrapper
+    tile-params(white, 50)
+  .works-wrapper
+    tile-params(black, 70)
+  .inspiration-wrapper
+    tile-params(white, 70)
+  .reviews-wrapper
+    tile-params(black, 70)
+.row-3
+  .behance-wrapper
+    tile-params(black, 50)
+  .instagram-wrapper
+    tile-params(white, 30)
+  .link-wrapper
+    tile-params(black, 50)
+  .about-wrapper
+    tile-params(white, 40)
