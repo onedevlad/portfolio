@@ -1,0 +1,41 @@
+@import './bootstrap/bootstrap/index.styl'
+
+grey-1 = #c4c4c4
+white = #e1e1e1
+black = #1d1d1d
+
+@font-face
+  font-family 'times'
+  src url('../fonts/times-regular.eot'),
+      url('../fonts/times-regular.woff') format('woff'),
+      url('../fonts/times-regular.ttf') format('truetype')
+  font-style normal
+  font-weight normal
+
+.container-fluid
+  padding 0
+  font-family times
+
+.row
+  margin 0
+[class*='col-']
+  padding 0
+
+verticalCenter()
+  relative top 50%
+  transform translate(0, -50%)
+
+@keyframes glitch {
+  25% {
+    text-shadow -1px 0 0 red, -1px 0 0 blue
+  }
+  50% {
+    text-shadow 1px 0 0 red, -2px 0 0 blue
+  }
+  75% {
+    text-shadow 0 0 0 red, -1px 0 0 blue
+  }
+  100% {
+    text-shadow 2px 0 0 red, -2px 0 0 blue
+  }
+}
