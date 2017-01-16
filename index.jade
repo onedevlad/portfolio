@@ -1,3 +1,5 @@
+include ./assets/templates/tile.jade
+
 doctype html
 html(lang='en')
   head
@@ -41,22 +43,19 @@ html(lang='en')
             span.line.line-4 work together!
       .row.row-2
         .col-md-3.about-wrapper
-          .background
-            img.icon(src='./assets/images/icons/hat.svg', alt='Hat')
+          +tile('hat.svg', 'dec-white.svg', 'About me')
         .col-md-3.works-wrapper
-          .background
-            img.icon(src='./assets/images/icons/glasses.svg', alt='Glasses')
+          +tile('glasses.svg', 'dec-black.svg', 'Works')
         .col-md-3.inspiration-wrapper
-          .background
-            img.icon(src='./assets/images/icons/mustaches-pipe.svg', alt='Mustaches and pipe')
+          +tile('mustaches-pipe-black.svg', 'dec-white.svg', 'What inspires')
         .col-md-3.reviews-wrapper
-          img.icon(src='./assets/images/icons/tie-white.svg', alt='Reviews')
+          +tile('tie-black.svg', 'dec-black.svg', 'What inspires')
       .row.row-3
         .col-md-3.behance-wrapper
-          img.icon(src='./assets/images/icons/behance-white.svg', alt='Behance')
+          +tile('behance-white.svg', 'behance-black.svg')
         .col-md-3.instagram-wrapper
-          img.icon(src='./assets/images/icons/instagram.svg', alt='Instagram')
+          +tile('instagram-black.svg', 'instagram-white.svg')
         .col-md-3.link-wrapper
-          img.icon(src='./assets/images/icons/anchor.svg', alt='Link')
+          +tile('anchor-white.svg', 'anchor-black.svg')
         .col-md-3.about-wrapper
-          img.icon(src='./assets/images/icons/mustaches-hat.svg', alt='About me')
+          +tile('mustaches-hat-black.svg', 'mustaches-hat-white.svg')

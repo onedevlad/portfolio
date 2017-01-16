@@ -1,0 +1,7 @@
+mixin tile(fgIconSrc, bgIconSrc, title)
+  .background
+    img.icon(src='./assets/images/icons/'+fgIconSrc, alt=title)
+  .foreground
+    if(title)
+      span.title= title
+    img.dec(src='./assets/images/icons/'+bgIconSrc, alt=title)

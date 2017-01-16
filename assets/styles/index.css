@@ -2218,10 +2218,28 @@ body,
   letter-spacing: 0.1em;
   text-transform: lowercase;
 }
-.row-2 .about-wrapper {
+.row-2 .foreground,
+.row-3 .foreground {
+  cursor: pointer;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.row-2 .foreground:hover,
+.row-3 .foreground:hover {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+.row-2 .about-wrapper .background {
   background: #e1e1e1;
 }
-.row-2 .about-wrapper .icon {
+.row-2 .about-wrapper .background .icon {
   width: 50;
   margin: 0 25%;
   position: relative;
@@ -2232,10 +2250,24 @@ body,
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
-.row-2 .works-wrapper {
+.row-2 .about-wrapper .foreground {
+  background: rgba(29,29,29,0.75);
+}
+.row-2 .about-wrapper .foreground .title {
+  padding: 10% 0;
+  display: block;
+  text-align: center;
+  font-size: 3vw;
+  color: #e1e1e1;
+}
+.row-2 .about-wrapper .foreground .dec {
+  width: 50;
+  margin: 0 25%;
+}
+.row-2 .works-wrapper .background {
   background: #1d1d1d;
 }
-.row-2 .works-wrapper .icon {
+.row-2 .works-wrapper .background .icon {
   width: 70;
   margin: 0 15%;
   position: relative;
@@ -2246,10 +2278,24 @@ body,
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
-.row-2 .inspiration-wrapper {
+.row-2 .works-wrapper .foreground {
+  background: rgba(225,225,225,0.75);
+}
+.row-2 .works-wrapper .foreground .title {
+  padding: 10% 0;
+  display: block;
+  text-align: center;
+  font-size: 3vw;
+  color: #1d1d1d;
+}
+.row-2 .works-wrapper .foreground .dec {
+  width: 50;
+  margin: 0 25%;
+}
+.row-2 .inspiration-wrapper .background {
   background: #e1e1e1;
 }
-.row-2 .inspiration-wrapper .icon {
+.row-2 .inspiration-wrapper .background .icon {
   width: 70;
   margin: 0 15%;
   position: relative;
@@ -2260,10 +2306,24 @@ body,
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
-.row-2 .reviews-wrapper {
+.row-2 .inspiration-wrapper .foreground {
+  background: rgba(29,29,29,0.75);
+}
+.row-2 .inspiration-wrapper .foreground .title {
+  padding: 10% 0;
+  display: block;
+  text-align: center;
+  font-size: 3vw;
+  color: #e1e1e1;
+}
+.row-2 .inspiration-wrapper .foreground .dec {
+  width: 50;
+  margin: 0 25%;
+}
+.row-2 .reviews-wrapper .background {
   background: #1d1d1d;
 }
-.row-2 .reviews-wrapper .icon {
+.row-2 .reviews-wrapper .background .icon {
   width: 70;
   margin: 0 15%;
   position: relative;
@@ -2274,10 +2334,24 @@ body,
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
-.row-3 .behance-wrapper {
+.row-2 .reviews-wrapper .foreground {
+  background: rgba(225,225,225,0.75);
+}
+.row-2 .reviews-wrapper .foreground .title {
+  padding: 10% 0;
+  display: block;
+  text-align: center;
+  font-size: 3vw;
+  color: #1d1d1d;
+}
+.row-2 .reviews-wrapper .foreground .dec {
+  width: 50;
+  margin: 0 25%;
+}
+.row-3 .behance-wrapper .background {
   background: #1d1d1d;
 }
-.row-3 .behance-wrapper .icon {
+.row-3 .behance-wrapper .background .icon {
   width: 50;
   margin: 0 25%;
   position: relative;
@@ -2288,10 +2362,31 @@ body,
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
-.row-3 .instagram-wrapper {
+.row-3 .behance-wrapper .foreground {
+  background: rgba(225,225,225,0.75);
+}
+.row-3 .behance-wrapper .foreground .title {
+  padding: 10% 0;
+  display: block;
+  text-align: center;
+  font-size: 3vw;
+  color: #1d1d1d;
+}
+.row-3 .behance-wrapper .foreground .dec {
+  width: 60;
+  margin: 0 20%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.row-3 .instagram-wrapper .background {
   background: #e1e1e1;
 }
-.row-3 .instagram-wrapper .icon {
+.row-3 .instagram-wrapper .background .icon {
   width: 30;
   margin: 0 35%;
   position: relative;
@@ -2302,10 +2397,31 @@ body,
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
-.row-3 .link-wrapper {
+.row-3 .instagram-wrapper .foreground {
+  background: rgba(29,29,29,0.75);
+}
+.row-3 .instagram-wrapper .foreground .title {
+  padding: 10% 0;
+  display: block;
+  text-align: center;
+  font-size: 3vw;
+  color: #e1e1e1;
+}
+.row-3 .instagram-wrapper .foreground .dec {
+  width: 40;
+  margin: 0 30%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.row-3 .link-wrapper .background {
   background: #1d1d1d;
 }
-.row-3 .link-wrapper .icon {
+.row-3 .link-wrapper .background .icon {
   width: 50;
   margin: 0 25%;
   position: relative;
@@ -2316,12 +2432,54 @@ body,
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
-.row-3 .about-wrapper {
+.row-3 .link-wrapper .foreground {
+  background: rgba(225,225,225,0.75);
+}
+.row-3 .link-wrapper .foreground .title {
+  padding: 10% 0;
+  display: block;
+  text-align: center;
+  font-size: 3vw;
+  color: #1d1d1d;
+}
+.row-3 .link-wrapper .foreground .dec {
+  width: 60;
+  margin: 0 20%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.row-3 .about-wrapper .background {
   background: #e1e1e1;
 }
-.row-3 .about-wrapper .icon {
+.row-3 .about-wrapper .background .icon {
   width: 40;
   margin: 0 30%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.row-3 .about-wrapper .foreground {
+  background: rgba(29,29,29,0.75);
+}
+.row-3 .about-wrapper .foreground .title {
+  padding: 10% 0;
+  display: block;
+  text-align: center;
+  font-size: 3vw;
+  color: #e1e1e1;
+}
+.row-3 .about-wrapper .foreground .dec {
+  width: 50;
+  margin: 0 25%;
   position: relative;
   top: 50%;
   -webkit-transform: translate(0, -50%);

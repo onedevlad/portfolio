@@ -40,12 +40,26 @@ line-params(size=1em, spacing=0, transform=none)
   letter-spacing spacing
   text-transform transform
 
-tile-params(bg=black, imgSize=50)
-  background bg
-  .icon
-    width imgSize
-    margin 0 ((100 - imgSize) / 2)%
-    verticalCenter()
+tile-params(bg=black, bgImgSize=50, fg=white, fgImgSize=50, fgVerticalCenter=false)
+  .background
+    background bg
+    .icon
+      width bgImgSize
+      margin 0 ((100 - bgImgSize) / 2)%
+      verticalCenter()
+  .foreground
+    background rgba(fg, 0.75)
+    .title
+      padding 10% 0
+      display block
+      text-align center
+      font-size 3vw
+      color (fg is black) ? white : black
+    .dec
+      width fgImgSize
+      margin 0 ((100 - fgImgSize) / 2)%
+      if fgVerticalCenter
+        verticalCenter()
 
 @keyframes glitch {
   25% {

@@ -125,21 +125,32 @@ body
       .line-4
         font-weight 700
         line-params(4vw, 0.1em, lowercase)
+
+.row-2
+.row-3
+  .foreground
+    cursor pointer
+    opacity 0
+    transition opacity 0.3s ease
+    &:hover
+      opacity 1
+
 .row-2
   .about-wrapper
-    tile-params(white, 50)
+    tile-params(white, 50, black, 50)
   .works-wrapper
-    tile-params(black, 70)
+    tile-params(black, 70, white, 50)
   .inspiration-wrapper
-    tile-params(white, 70)
+    tile-params(white, 70, black, 50)
   .reviews-wrapper
-    tile-params(black, 70)
+    tile-params(black, 70, white, 50)
+
 .row-3
   .behance-wrapper
-    tile-params(black, 50)
+    tile-params(black, 50, white, 60, true)
   .instagram-wrapper
-    tile-params(white, 30)
+    tile-params(white, 30, black, 40, true)
   .link-wrapper
-    tile-params(black, 50)
+    tile-params(black, 50, white, 60, true)
   .about-wrapper
-    tile-params(white, 40)
+    tile-params(white, 40, black, 50, true)
